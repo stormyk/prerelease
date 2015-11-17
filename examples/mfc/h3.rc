@@ -1,0 +1,687 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\h3.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\h3.ico"
+IDR_H3TYPE              ICON                    "res\\h3Doc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_UDS                 BITMAP                  "res\\bitmap1.bmp"
+IDB_UDSBAR              BITMAP                  "res\\toolbar_UDS.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  41, 16
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    SEPARATOR
+    BUTTON      IDD_SEARCH
+    SEPARATOR
+    BUTTON      ID_NAVIGATE_CENTER
+    SEPARATOR
+    BUTTON      ID_FILE_RESETGRAPH
+    BUTTON      ID_NAVIGATE_CROPTOSUBTREE
+    BUTTON      ID_NAVIGATE_TREATNUMERIC
+    SEPARATOR
+    BUTTON      ID_VIEW_THICKENLINE
+    BUTTON      ID_VIEW_NODE
+    BUTTON      ID_VIEW_CYCLELABELELEMENTS
+    BUTTON      ID_NAVIGATE_RECOLOR
+    SEPARATOR
+    BUTTON      ID_NCBI_SEARCH_CURRENT_NODE
+    BUTTON      ID_WEB_NCBIGILOOKUP
+    BUTTON      ID_WEB_TAEDSEARCHCURRENTNODE32800
+    BUTTON      ID_WEB_CUSTOMSEARCHCURRENTNODE
+    BUTTON      ID_WEB_GOOGLESEARCHCURRENTNODE
+    SEPARATOR
+    BUTTON      ID_NAVIGATE_TAGLEFT
+    BUTTON      ID_NAVIGATE_TAGRIGHT
+    BUTTON      ID_NAVIGATE_SHOWPATH
+    BUTTON      ID_NAVIGATE_HIDEPATH
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Reset Graph",                 ID_FILE_RESETGRAPH
+        MENUITEM "Save &As",                    ID_FILE_SAVE32806
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "Navigate"
+    BEGIN
+        MENUITEM "Locate (ctrl-f)",             IDD_SEARCH
+        MENUITEM "Center Tree at Root (C)",     ID_NAVIGATE_CENTER
+        MENUITEM "Crop to Subtree",             ID_NAVIGATE_CROPTOSUBTREE
+        MENUITEM "Revert to loaded File",       ID_NAVIGATE_REVERTTOLOADEDFILE
+        MENUITEM "Numbers as BootStraps",       ID_NAVIGATE_TREATNUMERIC
+        POPUP "Path"
+        BEGIN
+            MENUITEM "Tag Left (<)",                ID_NAVIGATE_TAGLEFT
+            MENUITEM "Tag Right (>)",               ID_NAVIGATE_TAGRIGHT
+            MENUITEM "Show Path (?)",               ID_NAVIGATE_SHOWPATH
+            MENUITEM "Hide Path (/)",               ID_NAVIGATE_HIDEPATH
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Toggle bounding sphere (s)",  ID_WINDOW_NEW
+        POPUP "Shapes"
+        BEGIN
+            MENUITEM "Dense Graph Toggle and Redraw (M) ", ID_VIEW_DENSEGRAPHTOGGLEANDREDRAW
+            MENUITEM "Cycle Node Shape (H)",        ID_VIEW_NODE, INACTIVE
+            MENUITEM "Cycle Line Thickness (E)",    ID_VIEW_THICKENLINE, INACTIVE
+            MENUITEM "Sphere-Ellipse (K)",          ID_VIEW_SPHERE, INACTIVE
+            MENUITEM "Dense Chordate View (D)",     ID_SHAPES_DENSECHORDATEVIEW
+        END
+        POPUP "Coloring"
+        BEGIN
+            MENUITEM "Cycle Node Color Scheme (G)", ID_Menu32798
+            MENUITEM "Recolor Background (R)",      ID_NAVIGATE_RECOLOR, INACTIVE
+            MENUITEM "Ghost Boxes (0) [0-9]",       ID_VIEW_GHOSTBOXES, INACTIVE
+            MENUITEM "No Ghost Boxes (*)",          ID_VIEW_NOGHOSTBOXES, INACTIVE
+            MENUITEM "Toggle Line Draw (N)",        ID_COLORING_TOGGLELINEDRAW
+        END
+        POPUP "Labels"
+        BEGIN
+            MENUITEM "Cycle Label Elements (L)",    ID_VIEW_CYCLELABELELEMENTS
+            MENUITEM "More Labels (b)",             ID_VIEW_MORELABELS
+            MENUITEM "Fewer Labels (B)",            ID_VIEW_FEWERLABELS
+            MENUITEM "Toggle Labels Left-Right( l )", ID_VIEW_TOGGLEELEMENTS, INACTIVE
+            MENUITEM "Toggle Landmark Title (t)",   ID_LABELS_TOGGLELANDMARKNODE
+            MENUITEM "Clear Landmark Titles (T)",   ID_LABELS_CLEAR
+            MENUITEM "Landmark High DNDS (z)",      ID_LABELS_LANDMARKHIGHDNDS
+            MENUITEM "Landmark Current Path (Z)",   ID_LABELS_LANDMARKCURRENTPATH
+        END
+    END
+    POPUP "Web"
+    BEGIN
+        MENUITEM "Google Search Current Node(W)", ID_WEB_GOOGLESEARCHCURRENTNODE
+        MENUITEM "NCBI Search Current Node",    ID_NCBI_SEARCH_CURRENT_NODE
+        MENUITEM "NCBI GI Lookup (A)",          ID_WEB_NCBIGILOOKUP
+        MENUITEM "TAED Search Current Node(a)", ID_WEB_TAEDSEARCHCURRENTNODE32800
+        MENUITEM "Custom Search Current Node(#)", ID_WEB_CUSTOMSEARCHCURRENTNODE
+        MENUITEM "Set Custom Browser Target [UDS]", ID_WEB_SETCUSTOMSEARCHPARAMETERS
+    END
+    POPUP "2D Viewer"
+    BEGIN
+        MENUITEM "Drawgram-Defaults (O)",       ID_VIEW_VIEWINDRAWGRAM
+        MENUITEM "Drawgram-Interactive (o)",    ID_2DVIEWER_TOGGLEINTERACTIVE
+        MENUITEM "Drawgram-Dialog Launch",      ID_2DVIEWER_CHOOSESTATICOPTIONS
+    END
+    POPUP "Export to PDF"
+    BEGIN
+        MENUITEM "Export With Default Settings", ID_EXPORTTOPDF_EXPORTWITHDEFAULTSETTINGS
+        MENUITEM "Custom Settings",             ID_Menu32790
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About TreeThrasher",         ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "F",            IDD_SEARCH,             VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 250, 397
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About TreeThrasher"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "TreeThrasher Version 0.41.1-beta",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2011 University of Wyoming",IDC_STATIC,55,25,188,12
+    DEFPUSHBUTTON   "OK",IDOK,193,7,50,14,WS_GROUP
+    LTEXT           "",IDC_COPYRIGHT,7,48,236,326
+END
+
+IDD_SEARCH DIALOGEX 0, 0, 316, 213
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Custom Render"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,15,32,235,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,84,180,50,14,NOT WS_TABSTOP
+    LTEXT           "Name of Outfile  ( filename.pdf )",IDC_STATIC,23,17,215,8
+    EDITTEXT        IDC_EDIT3,207,68,83,14,ES_AUTOHSCROLL
+    LTEXT           "Resolution",IDC_STATIC,208,54,66,8
+    LTEXT           "X-axis (500-5000)",IDC_STATIC,138,71,66,8
+    EDITTEXT        IDC_EDIT4,208,86,83,14,ES_AUTOHSCROLL
+    LTEXT           "Y-axis (500-5000)",IDC_STATIC,138,91,66,8
+    GROUPBOX        "Render Time",IDC_STATIC,18,113,115,63
+    LTEXT           "Status: Waiting for User",IDC_STATIC11,150,126,144,66,SS_SUNKEN
+    DEFPUSHBUTTON   "Render",IDC_BUTTON5,24,180,50,14,NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT5,27,140,96,14,ES_AUTOHSCROLL
+    LTEXT           "Seconds (0-120)",IDC_STATIC,27,127,89,10
+END
+
+IDD_PDF1 DIALOGEX 0, 0, 316, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Node Search"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,15,32,149,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Next Partial Match",IDC_BUTTON1,175,31,98,14
+    PUSHBUTTON      "Cancel",IDCANCEL,259,162,50,14
+    LTEXT           "Search by Name",-1,23,17,106,8
+    LTEXT           "Static",IDC_COPYRIGHT,23,124,131,40
+    PUSHBUTTON      "Exact Case Sensive Match",IDC_BUTTON2,106,81,109,14
+    PUSHBUTTON      "Next Partial Case Sensive Match",IDC_BUTTON3,105,64,136,16
+    PUSHBUTTON      "Ok (search)",IDOK,199,162,50,14
+    PUSHBUTTON      "Tag Left",IDC_TAGLEFT,20,66,50,14
+    PUSHBUTTON      "Tag Right",IDC_TAG_RIGHT,20,83,50,14
+    PUSHBUTTON      "Show Path",IDC_SHOW_PATH,19,100,50,14
+END
+
+IDD_CUSTOM_WEB DIALOGEX 0, 0, 583, 240
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set User Defined Search Site"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,476,219,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,526,219,50,14
+    EDITTEXT        IDC_EDIT1,14,37,276,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,332,40,208,18,ES_AUTOHSCROLL
+    LTEXT           "Prefix",IDC_STATIC,16,22,131,8
+    LTEXT           "Suffix",IDC_STATIC,371,24,99,8
+    LTEXT           "NODE_1234",IDC_STATIC,292,43,40,8
+    LTEXT           "Node Name",IDC_STATIC,290,22,38,8
+    LTEXT           "http://en.wikipedia.org/wiki/",IDC_STATIC,40,97,251,8
+    GROUPBOX        "Suffix (Blank)",IDC_STATIC,337,89,202,23
+    GROUPBOX        "Prefix",IDC_STATIC,31,86,251,23
+    LTEXT           "http://www.google.com/search?q=",IDC_STATIC,37,132,238,8
+    GROUPBOX        "Suffix (Google Image Search Flags)",IDC_STATIC,339,125,202,23
+    GROUPBOX        "Prefix",IDC_STATIC,33,122,252,23
+    LTEXT           "&&hl=en&&prmd=ivns&&tbm=isch",IDC_STATIC,343,133,188,8
+    GROUPBOX        "Examples",IDC_STATIC,17,70,541,89
+    PUSHBUTTON      "Google Image",IDC_BUTTON1,19,165,50,14
+    PUSHBUTTON      "Google Wiki",IDC_BUTTON2,19,185,50,14
+    PUSHBUTTON      "Bing",IDC_BUTTON3,308,189,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Google NCBI",IDC_BUTTON4,91,167,50,14
+    PUSHBUTTON      "Google NIH",IDC_BUTTON5,91,188,50,14
+    PUSHBUTTON      "Google PDB",IDC_BUTTON6,90,209,50,14
+    PUSHBUTTON      "Google Nature",IDC_BUTTON7,155,166,50,14
+    PUSHBUTTON      "Google Science",IDC_BUTTON8,152,188,61,14
+    PUSHBUTTON      "Google Scholar",IDC_BUTTON9,153,210,63,14
+    PUSHBUTTON      "Youtube",IDC_BUTTON10,294,209,66,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Ensemble(Prot)",IDC_BUTTON11,227,188,69,14
+    PUSHBUTTON      "Cath",IDC_BUTTON12,19,208,50,14
+    PUSHBUTTON      "Scope",IDC_BUTTON13,227,210,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Set",IDC_BUTTON14,542,42,34,14
+    CONTROL         137,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE,379,175,187,40
+    CONTROL         138,IDC_STATIC,"Static",SS_BITMAP,248,160,328,10
+END
+
+IDD_DRAWGRAM DIALOGEX 0, 0, 334, 264
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Drawgram Launcher"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,228,243,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,277,243,50,14
+    PUSHBUTTON      "Cladogram",IDC_BUTTON1,17,83,39,14
+    PUSHBUTTON      "Phenogram",IDC_BUTTON15,17,105,41,14
+    PUSHBUTTON      "Circular",IDC_BUTTON2,17,182,29,14
+    PUSHBUTTON      "Curvogram",IDC_BUTTON16,17,126,40,14
+    PUSHBUTTON      "Swoopogram",IDC_BUTTON17,17,163,46,14
+    PUSHBUTTON      "Eurogram",IDC_BUTTON18,17,143,36,14
+    PUSHBUTTON      "Use Branch Length",IDC_BUTTON3,154,75,65,14
+    PUSHBUTTON      "Ignore Branch Length",IDC_BUTTON4,233,75,74,14
+    PUSHBUTTON      "Horizontal ",IDC_BUTTON5,175,121,50,14
+    PUSHBUTTON      "Vertical",IDC_BUTTON19,248,122,50,14
+    GROUPBOX        "Tree Growth Direction",IDC_STATIC,141,107,186,35
+    GROUPBOX        "Use Branch Length",IDC_STATIC,144,58,183,43
+    GROUPBOX        "Tree Style",IDC_STATIC,7,55,79,182
+    LTEXT           "Use Of Branch Length Here",IDC_STATIC,191,209,88,8
+    LTEXT           "Tree Growth Direction Here",IDC_STATIC,191,221,88,8
+    LTEXT           "Shape of Tree Here",IDC_STATIC,191,195,64,8
+    GROUPBOX        "Current Settings",IDC_STATIC,145,180,182,59
+END
+
+IDD_STATUS_LOADFILE DIALOGEX 0, 0, 214, 107
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File Load Progress"
+FONT 14, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,157,86,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,157,86,50,14,NOT WS_VISIBLE
+    LTEXT           "Loading File.......",IDC_STATIC,22,23,61,9
+    LTEXT           "Reading File From",IDC_STATIC,34,40,58,8
+    LTEXT           "Expanding Newick File",IDC_STATIC,34,49,72,8
+    LTEXT           "Converting Newick File to LVHIST",IDC_STATIC,34,57,104,8
+    LTEXT           "Initalizing Tree",IDC_STATIC,34,65,45,8
+    LTEXT           "Returning Control to User",IDC_STATIC,34,73,78,8
+    LTEXT           "Waiting",IDC_STATIC,157,40,34,9
+    LTEXT           "Waiting",IDC_STATIC,157,49,34,9
+    LTEXT           "Waiting",IDC_STATIC,157,57,34,9
+    LTEXT           "Waiting",IDC_STATIC,157,65,34,9
+    LTEXT           "Waiting",IDC_STATIC,157,73,34,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "University of Wyoming"
+            VALUE "FileDescription", "TreeThrasher MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "TreeThrasher"
+            VALUE "LegalCopyright", "Copyright (C) 2011"
+            VALUE "OriginalFilename", "TreeThrasher"
+            VALUE "ProductName", "TreeThrasher"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 390
+    END
+
+    IDD_SEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_PDF1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_CUSTOM_WEB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 576
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_DRAWGRAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 327
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 257
+    END
+
+    IDD_STATUS_LOADFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "TreeThrasher\n\nTreeThrasher\n\n\nTreeThrasher.Document\nTreeThrasher Document"
+    IDD_SEARCH              "Locate a Name in the Tree"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "TreeThrasher"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_VIEWINDRAWGRAM  "Launch Drawgram on current graph (drawgram.exe must be in same directory)"
+    ID_VIEW_THICKENLINE     "Cycle Line Tickness"
+    ID_2DVIEWER_TOGGLEINTERACTIVE 
+                            "Launch Drawgram on current graph (drawgram.exe must be in same directory)"
+    ID_2DVIEWER_CHOOSESTATICOPTIONS 
+                            "Launch Drawgram on current graph (drawgram.exe must be in same directory)"
+    ID_EXPORTTOPDF_EXPORTWITHDEFAULTSETTINGS 
+                            "Make a PDF 1000x1000 (Caution: Labels may have issues)"
+    ID_Menu32790            "Make a PDF of custom size (Caution: Labels may have issues)"
+    ID_FILE_RESETGRAPH      "Reset Graph to Loaded State"
+    ID_WEB_GOOGLESEARCHCURRENTNODE "Google Current"
+    ID_WEB_CUSTOMSEARCHCURRENTNODE 
+                            "User Defined Search (Defaults to Google Scholar)"
+    ID_WEB_TAEDSEARCHC      "TAED SEARCH CURRENT NODE"
+    ID_WEB_SETCUSTOMSEARCHPARAMETERS 
+                            "Change what the UDS toolbar option opens"
+    ID_WEB_TAEDSEARCHCURRENTNODE "TAED Search Current Node"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NAVIGATE_RECOLOR     "Change Background Color"
+    ID_VIEW_HEATMAPTOGGLE   "Change to/from RGB to HeatMap"
+    ID_VIEW_NODE            "Changes Spheres to/from Cubes"
+    ID_NAVIGATE_CROPTOSUBTREE 
+                            "Examine Subtree (WARNING: REMOVES REST OF TREE)"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WEB_TAEDSEARCHCURRENTNODE32800 "TAED Search Current Node"
+    ID_NAVIGATE_CENTER      "Navigate to Root of Tree"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_TAGLEFT             "Select Left Side of Path"
+    IDC_TAG_RIGHT           "Select Right End of Path"
+    IDC_SHOW_PATH           "Turn on the Path View"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NAVIGATE_TREATNUMERIC 
+                            "Change Numeric->BootStrapValues (Warning One Way Change)"
+    ID_VIEW_DENSEGRAPHTOGGLEANDREDRAW "Change to a less/more cluttered view"
+    ID_BUTTON32826          "TURN OFF PATH VIEW"
+    IDC_TAG_LEFT            "TAG LEFT"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TAG_LEFT             "Mark Left Side Of Path"
+    ID_TAG_RIGHT            "Tag Right Side Of Path"
+    ID_PATH_FIND            "Highlight Marked Path"
+    ID_HIDE_PATH            "Turn Off Path Highlight"
+    ID_NAVIGATE_TAGLEFT     "Set the left side of the path"
+    ID_NAVIGATE_TAGRIGHT    "Set right hand side of path"
+    ID_NAVIGATE_SHOWPATH    "Highlight the path"
+    ID_NAVIGATE_HIDEPATH    "Remove the highlighting from the path"
+    ID_VIEW_GHOSTBOXES      "Display Further Boxes as Outlines"
+    ID_VIEW_NOGHOSTBOXES    "Paint All Boxes"
+    ID_BSV                  "Toggle Numerical Entries to Boot Strap Values"
+    ID_VIEW_CYCLELABELELEMENTS "Cycle view on # Delimited Node Names"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NCBI_SEARCH_CURRENT_NODE "Search NCBI for Information on Current Node"
+    ID_WEB_NCBIGILOOKUP     "Grab the GI # from node, bring up NCBI  page"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\h3.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
